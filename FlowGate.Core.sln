@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11723.189 insiders
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowGate.Core", "FlowGate.Core.csproj", "{35B2B7B6-16FD-2715-E573-5C4BE330742B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35B2B7B6-16FD-2715-E573-5C4BE330742B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B2B7B6-16FD-2715-E573-5C4BE330742B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B2B7B6-16FD-2715-E573-5C4BE330742B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B2B7B6-16FD-2715-E573-5C4BE330742B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF76036D-5724-4800-982C-5100DF6327FA}
+	EndGlobalSection
+EndGlobal
