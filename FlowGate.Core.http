@@ -1,0 +1,6 @@
+@FlowGate.Core_HostAddress = http://localhost:5128
+
+GET {{FlowGate.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
