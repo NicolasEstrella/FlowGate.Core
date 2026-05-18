@@ -17,6 +17,8 @@ public sealed class WorkflowInstance : AuditableEntity
 
     public WorkflowInstanceStatus CurrentStatus { get; set; } = WorkflowInstanceStatus.Draft;
 
+    public string? FormDataJson { get; set; }
+
     public DateTimeOffset? SubmittedAtUtc { get; set; }
 
     public DateTimeOffset? CompletedAtUtc { get; set; }

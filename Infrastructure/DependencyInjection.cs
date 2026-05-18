@@ -1,7 +1,9 @@
 using System.Security.Claims;
 using System.Text.Json.Serialization;
+using FlowGate.Core.Application.Engine;
 using FlowGate.Core.Application.Security;
 using FlowGate.Core.Application.Services;
+using FlowGate.Core.Infrastructure.Engine;
 using FlowGate.Core.Infrastructure.Persistence;
 using FlowGate.Core.Infrastructure.Security;
 using FlowGate.Core.Infrastructure.Services;
@@ -26,6 +28,11 @@ public static class DependencyInjection
         services.AddScoped<IHealthService, HealthService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IWorkflowService, WorkflowService>();
+
+        services.AddScoped<IWorkflowStore, EfWorkflowStore>();
+        services.AddScoped<IRuleEngine, RuleEngineService>();
+        services.AddScoped<IWorkflowStateMachine, WorkflowStateMachineService>();
+        services.AddScoped<IWorkflowEngine, WorkflowEngineService>();
 
         services
             .AddAuthentication(DevelopmentHeaderAuthenticationHandler.SchemeName)

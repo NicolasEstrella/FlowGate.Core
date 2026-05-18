@@ -14,6 +14,7 @@ public sealed class WorkflowInstanceConfiguration : IEntityTypeConfiguration<Wor
         builder.Property(instance => instance.CreatedBy).HasMaxLength(128).IsRequired();
         builder.Property(instance => instance.ModifiedBy).HasMaxLength(128);
         builder.Property(instance => instance.CurrentStatus).HasConversion<string>().HasMaxLength(64).IsRequired();
+        builder.Property(instance => instance.FormDataJson).HasColumnType("jsonb");
         builder.HasOne(instance => instance.Workflow)
             .WithMany(workflow => workflow.Instances)
             .HasForeignKey(instance => instance.WorkflowId)

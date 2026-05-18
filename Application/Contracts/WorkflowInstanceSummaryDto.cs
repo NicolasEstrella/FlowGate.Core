@@ -6,6 +6,7 @@ public sealed record WorkflowInstanceSummaryDto(
     string WorkflowName,
     string Title,
     string CurrentStatus,
+    Guid RequesterId,
     string RequesterName,
     DateTimeOffset CreatedAtUtc,
     DateTimeOffset? SubmittedAtUtc,

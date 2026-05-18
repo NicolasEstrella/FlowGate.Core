@@ -11,9 +11,15 @@ public sealed class ApprovalStep : AuditableEntity
 
     public int Order { get; set; }
 
+    public int StepIndex { get; set; }
+
     public string Name { get; set; } = string.Empty;
 
     public string RequiredRole { get; set; } = string.Empty;
+
+    public StepExecutionType ExecutionType { get; set; } = StepExecutionType.Sequential;
+
+    public string? GroupId { get; set; }
 
     public ApprovalStepStatus Status { get; set; } = ApprovalStepStatus.Pending;
 

@@ -35,6 +35,7 @@ public sealed class WorkflowService(FlowGateDbContext dbContext) : IWorkflowServ
                 instance.Workflow.Name,
                 instance.Title,
                 instance.CurrentStatus.ToString(),
+                instance.RequesterId,
                 instance.Requester.DisplayName,
                 instance.CreatedAtUtc,
                 instance.SubmittedAtUtc,

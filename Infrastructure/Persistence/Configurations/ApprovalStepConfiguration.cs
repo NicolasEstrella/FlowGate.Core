@@ -13,6 +13,8 @@ public sealed class ApprovalStepConfiguration : IEntityTypeConfiguration<Approva
         builder.Property(step => step.Name).HasMaxLength(200).IsRequired();
         builder.Property(step => step.RequiredRole).HasMaxLength(64).IsRequired();
         builder.Property(step => step.Status).HasConversion<string>().HasMaxLength(64).IsRequired();
+        builder.Property(step => step.ExecutionType).HasConversion<string>().HasMaxLength(32).IsRequired();
+        builder.Property(step => step.GroupId).HasMaxLength(128);
         builder.Property(step => step.DecisionComment).HasMaxLength(1000);
         builder.Property(step => step.CreatedBy).HasMaxLength(128).IsRequired();
         builder.Property(step => step.ModifiedBy).HasMaxLength(128);
